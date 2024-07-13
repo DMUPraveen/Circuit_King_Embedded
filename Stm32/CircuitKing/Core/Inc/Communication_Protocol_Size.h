@@ -1,0 +1,16 @@
+#include "main.h"
+#ifndef COMMUNICATION_PROTOCOL_H
+#define COMMUNICATION_PROTOCOL_H
+const uint8_t SINE_WAVE_COMMAND = 10;
+const uint8_t ARBITRARY_WAVE_COMMAND= 11;
+const uint8_t PULSE_DURATION_COMMAND = 101;
+const uint8_t OSCILLOSCOPE_COMMAND = 73;
+
+
+
+
+const size_t SINE_WAVE_COMMAND_SIZE = 6;
+const size_t ARBITRARY_WAVE_COMMAND_SIZE= 2057;
+const size_t PULSE_DURATION_COMMAND_SIZE = 1;
+const size_t OSCILLOSCOPE_COMMAND_SIZE = 1;
+#endif

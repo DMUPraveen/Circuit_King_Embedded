@@ -22,7 +22,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "usb_driver.h"
+#include "usbd_cdc_if.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -106,7 +107,11 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+		if(usb_driver_data_ready == USB_DRIVER_DATA_READY){
+			HAL_GPIO_TogglePin(LED_GPIO_Port,LED_Pin);
+			usb_driver_clear_data_ready();
+			CDC_Transmit_FS(usb_driver_data_buffer,usb_driver_data_length_in_buffer);
+		}
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
