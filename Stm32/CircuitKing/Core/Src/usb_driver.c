@@ -34,7 +34,7 @@ void usb_driver_data_recieved_callback(uint8_t* buffer, size_t data_len){
 				expected_data_length = ARBITRARY_WAVE_COMMAND_SIZE;
 				break;
 			case PULSE_DURATION_COMMAND:
-				expected_data_length = PULSE_DURATION_COMMAND;
+				expected_data_length = PULSE_DURATION_COMMAND_SIZE;
 				break;
 			case OSCILLOSCOPE_COMMAND:
 				expected_data_length = OSCILLOSCOPE_COMMAND_SIZE;
