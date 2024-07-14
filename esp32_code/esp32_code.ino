@@ -24,7 +24,9 @@ void setup()
             Busy wait while no data is available
             */
         }
+        Serial.println("Message Received");
         uint8_t command = Serial2.read(); // read the command code
+        Serial.println((int)command);
         switch (command)
         {
         case SINE_WAVE_COMMAND:
