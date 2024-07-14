@@ -2,6 +2,7 @@
 #include "arbitrary_wave_command.h"
 #include "sine_wave_command.h"
 #include "Command_codes.h"
+#include "iv_command.h"
 #define RXD2 16
 #define TXD2 17
 void serial_cleanup()
@@ -37,6 +38,10 @@ void setup()
         case ARBITRARY_WAVE_COMMAND:
             run_arbitrary_wave_command(&sig);
             Serial.println("Arbitrary wave OK");
+            break;
+        case IV_COMMAND:
+            run_iv_command();
+            Serial.println("IV command OK");
             break;
 
         default:
