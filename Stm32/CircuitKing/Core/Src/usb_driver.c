@@ -39,6 +39,9 @@ void usb_driver_data_recieved_callback(uint8_t* buffer, size_t data_len){
 			case OSCILLOSCOPE_COMMAND:
 				expected_data_length = OSCILLOSCOPE_COMMAND_SIZE;
 				break;
+			case IV_COMMAND:
+				expected_data_length = IV_COMMAND_SIZE;
+				break;
 		}
 	}
 	

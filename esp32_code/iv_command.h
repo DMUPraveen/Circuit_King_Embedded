@@ -13,10 +13,13 @@ void read_values(float *return_values)
 void run_iv_command()
 {
     uint8_t connections = Serial2.read();
+    Serial.print("connections done");
     float voltage;
     float current;
-    Serial.readBytes((uint8_t *)(&voltage), 4);
-    Serial.readBytes((uint8_t *)(&current), 4);
+    Serial2.readBytes((uint8_t *)(&voltage), 4);
+    Serial.print("voltage done");
+    Serial2.readBytes((uint8_t *)(&current), 4);
+    Serial.print("current done");
     set_voltage_and_current(voltage, current);
     float return_values[6] = {0, 1, 2, 3, 4, 5};
     read_values(return_values);

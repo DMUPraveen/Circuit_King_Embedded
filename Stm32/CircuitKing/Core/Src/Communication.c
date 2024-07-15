@@ -17,6 +17,9 @@ void communication(){
 			case ARBITRARY_WAVE_COMMAND:
 				run_esp_com();
 				break;
+			case IV_COMMAND:
+				run_esp_com();
+				break;
 				
 		}
 	}
