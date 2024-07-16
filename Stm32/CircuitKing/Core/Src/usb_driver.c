@@ -42,6 +42,9 @@ void usb_driver_data_recieved_callback(uint8_t* buffer, size_t data_len){
 			case IV_COMMAND:
 				expected_data_length = IV_COMMAND_SIZE;
 				break;
+			case GPIO_COMMAND:
+				expected_data_length = GPIO_COMMAND_SIZE;
+				break;
 		}
 	}
 	

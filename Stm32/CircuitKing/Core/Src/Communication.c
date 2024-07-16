@@ -1,6 +1,7 @@
 #include "Communication.h"
 #include "Pulse_Measure.h"
 #include "Espcom.h"
+#include "GPIO_driver.h"
 void communication(){
 	if(usb_driver_data_ready==USB_DRIVER_DATA_READY){
 		uint8_t code = usb_driver_data_buffer[0];
@@ -19,6 +20,9 @@ void communication(){
 				break;
 			case IV_COMMAND:
 				run_esp_com();
+				break;
+			case GPIO_COMMAND:
+				run_gpio_command();
 				break;
 				
 		}
