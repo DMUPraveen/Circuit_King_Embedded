@@ -16,6 +16,7 @@ void setup()
 {
     Serial2.begin(115200, SERIAL_8N1, RXD2, TXD2);
     Serial.begin(115200);
+    setup_iv();
     auto sig = Signal_Generator();
     while (1)
     {
